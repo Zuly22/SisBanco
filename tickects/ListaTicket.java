@@ -5,6 +5,8 @@
 package tickects;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.ListIterator;
 
 /**
  *
@@ -12,9 +14,14 @@ import java.util.ArrayList;
  */
 public class ListaTicket {
     private ArrayList<Ticket> listaTicket;
+    
+    private LinkedList<String> lista;
+    private ListIterator<String> iterador;
 
     public ListaTicket() {
         this.listaTicket = new ArrayList<>();
+        this.lista = lista;
+        this.iterador = lista.listIterator();
     }
     
     public void agregarTicket(Ticket ticket){
@@ -35,6 +42,21 @@ public class ListaTicket {
     
     public ArrayList<Ticket> ListaTicket() {
         return listaTicket;
+    }
+
+    public boolean avanzar() {
+        if (iterador.hasNext()) {
+            iterador.next();
+            return true;
+        }
+        return false;
+    }
+
+    public String obtenerElementoActual() {
+        if (iterador.hasPrevious()) {
+            return iterador.previous();
+        }
+        return null;
     }
     
 }
