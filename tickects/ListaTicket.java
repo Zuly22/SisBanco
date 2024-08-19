@@ -13,7 +13,7 @@ import java.util.ArrayList;
 public class ListaTicket {
     private ArrayList<Ticket> listaTicket;
 
-    public ListaTicket(ArrayList<Ticket> listaTicket) {
+    public ListaTicket() {
         this.listaTicket = new ArrayList<>();
     }
     
