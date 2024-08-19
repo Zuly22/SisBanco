@@ -25,8 +25,12 @@ public class ListaTicket {
         listaTicket.removeIf(Ticket -> ticket.getNumero().equals(numero));
     }
     
-    public void buscarTicket(int numero){
-            
+    public void buscarTicket(int numero, String tipo){
+        for (Ticket ticket : listaTicket) {
+            if (listaTicket.get(numero).equals(tipo)) {
+                return numero;
+            }
+        }
     }
     
     public ArrayList<Ticket> ListaTicket() {
