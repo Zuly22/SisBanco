@@ -8,7 +8,7 @@ package tickects;
  *
  * @author Student
  */
-public class ticket {
+public class Ticket {
    private int numero;
    private String tipo;
 
@@ -24,12 +24,12 @@ public class ticket {
         this.tipo = tipo;
     }
 
-    public ticket(int numero, String tipo) {
+    public Ticket(int numero, String tipo) {
         this.numero = numero;
         this.tipo = tipo;
     }
     
-    public ticket(){
+    public Ticket(){
         this(0,"");
     }
 
